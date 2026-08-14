@@ -21,11 +21,11 @@ async function loadPost() {
   try {
     const [indexRes, mdRes] = await Promise.all([
       fetch("posts/index.json"),
-      fetch(`posts/${slug}.md`),
+      fetch(`posts/${slug.split("-")[0]}/${slug}.md`),
     ]);
 
     if (!indexRes.ok) throw new Error("No se pudo cargar posts/index.json");
-    if (!mdRes.ok) throw new Error(`No se encontró posts/${slug}.md`);
+    if (!mdRes.ok) throw new Error(`No se encontró posts/${slug.split("-")[0]}/${slug}.md`);
 
     const index = await indexRes.json();
     const meta = index.find((p) => p.slug === slug);

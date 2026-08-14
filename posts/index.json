@@ -1,10 +1,26 @@
 [
   {
-    "slug": "index",
-    "title": "Índice",
+    "slug": "index-java",
+    "title": "Índice Java",
     "date": "2026-07-13",
     "category": "Índice",
     "tags": ["Índice"],
-    "excerpt": "Contenido del blog de Java y su ecosistema."
+    "excerpt": "Contenido sobre Java y su ecosistema."
+  },
+  {
+    "slug": "index-linux",
+    "title": "Índice Linux",
+    "date": "2026-08-13",
+    "category": "Índice",
+    "tags": ["Índice", "Linux"],
+    "excerpt": "Contenido sobre Linux"
+  },
+  {
+    "slug": "linux-introduccion",
+    "title": "Introducción Linux",
+    "date": "2026-08-13",
+    "category": "Linux",
+    "tags": ["Linux"],
+    "excerpt": "Introducción sobre qué es Linux"
   }
 ]
