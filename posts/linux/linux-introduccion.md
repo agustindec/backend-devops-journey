@@ -37,3 +37,42 @@ El **25 de Agosto de 1991**, Linus Torvalds **presenta LINUX al mundo** con la s
 > PS. Yes - it's free of any minix code, and it has a multi-threaded fs. It is NOT portable (uses 386 task switching etc), and it probably never will support anything other than AT-harddisks, as that's all I hava :-(.
 >
 > \- Linus Torvlads
+
+## Conceptos Básicos
+
+`Kernel`:
+
+Programa informático que se encuentra en el **núcleo del sistema operativo** de un ordenador y tiene un control total sobre todo lo que ocurre en el sistema.
+
+Siempre reside en la memoria, facilita las interacciones entre los componentes de hardware y software, gestiona la ejecución de procesos, maneja interrupciones.
+
+Se encarga de una zona separada de la memoria protegida del acceso del software de aplicación o de otras partes menos críticas del sistema operativo.
+
+`Espacio de usuario`:
+
+Los programas de aplicación (navegadores, editores de texto, reproductores de video...) utilizan una zona de memoria separada.
+
+Esta separación evita que los datos del usuario y los del kernel interfieran entre si y provoquen inestabilidad y lentitud.
+
+## Evolución de Linux
+
+Linus Torvalds publica el **primer Kernel de Linux bajo su propia licencia** con ciertas restricciones para actividades comerciales.
+
+Desde el primer momento **Linux incluía software** de aplicación procedente del proyecto **GNU**, por ejemplo, **GNU BASH**.
+
+En 1992 Torvalds decide liberar el **Kernel de Linux bajo la licencia GNU GPL**.
+
+Desde este momento, Torvalds une esfuerzos con los desarrolladores de GNU para integrar Linux con varios componentes de GNU para crear un sistema operativo gratuito funcional y completo.
+
+## Distribuciones de Linux
+
+En 1991 Torvalds **distribuyó la primera versión de Linux (0.01)** únicamente como código fuente.
+
+Más adelante se comenzó a distribuir como una imagen de disquete que contenía el Kernel de Linux y las utilidades de GNU.
+
+La instalación de Linux seguía sin ser una tarea sencilla, a partir de 1992 empiezan a aparecer **nuevas distribuciones del Kernel de Linux con diferente software de aplicación**.
+
+Dos de las distribuciones más populares fueron **Slackware** y **Debian**, presentadas en 1993 y que se consideran las dos distribuciones de Linux más antiguas aún en uso.
+
+Una distribución típica de Linux comprende el kernel de Linux, herramientas y bibliotecas GNU, software adicional, documentación, un sistema de ventanas, un gestor de ventanas y un entorno de escritorio.
+

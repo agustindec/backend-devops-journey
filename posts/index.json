@@ -22,5 +22,13 @@
     "category": "Linux",
     "tags": ["Linux"],
     "excerpt": "Introducción sobre qué es Linux"
+  },
+  {
+    "slug": "linux-shell",
+    "title": "Shell de Linux",
+    "date": "2026-08-16",
+    "category": "Linux",
+    "tags": ["Linux", "shell"],
+    "excerpt": "Introducción a la shell de Linux"
   }
 ]
