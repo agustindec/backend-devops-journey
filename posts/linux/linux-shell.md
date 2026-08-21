@@ -99,3 +99,62 @@ La expansión del historial también permite reutilizar comandos sin volver a es
 - `!!`: repite el último comando; por ejemplo, `sudo !!` vuelve a ejecutarlo con privilegios administrativos.
 - `!n`: ejecuta el comando identificado con el número `n` mostrado por `history`.
 - `!texto`: ejecuta el comando más reciente que comienza con `texto`.
+
+
+## Crear propio comando alias
+
+Un alias permite asignar un nombre corto a un comando o a una combinacion de comandos que se utiliza con frecuencia. Su sintaxis es `alias nombre='comando'`; no debe haber espacios alrededor del signo igual (`=`).
+
+Por ejemplo, se puede crear un alias llamado `ll` para mostrar todos los archivos en formato largo y con tamaños faciles de leer:
+
+```bash
+alias ll='ls -lah'
+```
+
+Despues de definirlo, basta con ejecutar `ll`. El alias solo estara disponible en la sesion actual de la terminal. Para consultar los alias definidos se utiliza `alias`; para ver uno concreto, `alias ll` o `type ll`:
+
+```bash
+alias
+alias ll
+type ll
+```
+
+Para eliminar un alias de la sesion actual se utiliza `unalias`:
+
+```bash
+unalias ll
+```
+
+### Crear un alias permanente
+
+Para conservar el alias al abrir una terminal nueva, se debe agregar su definicion al archivo de configuracion de la shell:
+
+- Bash: `~/.bashrc`.
+- Zsh: `~/.zshrc`.
+
+Por ejemplo, en Bash se puede editar `~/.bashrc` y agregar al final:
+
+```bash
+alias ll='ls -lah'
+alias actualizar='sudo apt update && sudo apt upgrade'
+```
+
+Los cambios se aplicaran al abrir una terminal nueva. Tambien se pueden cargar inmediatamente sin cerrar la sesion:
+
+```bash
+source ~/.bashrc
+```
+
+Es recomendable encerrar el comando entre comillas simples para evitar que la shell expanda variables o caracteres especiales al definir el alias. Si el comando necesita recibir argumentos en posiciones concretas o contiene logica mas compleja, conviene crear una funcion. Por ejemplo:
+
+```bash
+crear_directorio() {
+  mkdir -p "$1" && cd "$1"
+}
+```
+
+Esta funcion crea el directorio indicado como primer argumento y entra en el solo si `mkdir` termina correctamente:
+
+```bash
+crear_directorio proyecto
+```
